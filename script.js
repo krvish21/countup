@@ -1,3 +1,23 @@
+function createConfetti() {
+    const confettiContainer = document.createElement('div');
+    confettiContainer.className = 'confetti';
+    document.body.appendChild(confettiContainer);
+
+    const colors = ['#ffeb3b', '#e14d72', '#6dd5ed', '#4caf50'];
+    
+    for (let i = 0; i < 100; i++) {
+        const confettiPiece = document.createElement('div');
+        confettiPiece.className = 'confetti-piece';
+        confettiPiece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confettiPiece.style.left = `${Math.random() * 100}vw`;
+        confettiPiece.style.top = `${Math.random() * 100}vh`;
+        confettiPiece.style.width = `${Math.random() * 10 + 5}px`;
+        confettiPiece.style.height = confettiPiece.style.width;
+        confettiPiece.style.animationDuration = `${Math.random() * 2 + 3}s`;
+        confettiContainer.appendChild(confettiPiece);
+    }
+}
+
 function updateTimer() {
     const countupDate = new Date("July 3, 2024 07:58:00").getTime();
     const now = new Date().getTime();
@@ -36,10 +56,17 @@ function updateTimer() {
     const today = new Date().getDate();
     const greetingElement = document.getElementById('monthly-greeting');
     if (today === 3) {
-        const monthsHere = years * 12 + months;
-        greetingElement.innerHTML = `🎉 <span>Happy ${monthsHere} Month${monthsHere === 1 ? '' : 's'}!</span> 🎉`;
+        greetingElement.innerHTML = `🎉 <span>Happy ${years * 12 + months} Months!</span> 🎉`;
+        if (!document.querySelector('.confetti')) {
+            createConfetti();
+        }
     } else {
         greetingElement.innerHTML = '';
+        // Remove confetti if present
+        const confetti = document.querySelector('.confetti');
+        if (confetti) {
+            confetti.remove();
+        }
     }
 }
 
