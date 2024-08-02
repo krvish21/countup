@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(to bottom right, #a8e0a2, #6dd5ed); /* Greenish gradient */
+    background: linear-gradient(to bottom right, #e14d72, #6dd5ed); /* Greenish gradient */
     color: #ffffff;
 }
 
@@ -22,13 +22,13 @@ body {
 h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
-    color: #ff5e6c;
+    color: #eb4286;
 }
 
 h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
-    color: #fff;
+    color: #fcf798;
 }
 
 #timer {
