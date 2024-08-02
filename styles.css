@@ -1,0 +1,131 @@
+body {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom right, #a8e0a2, #6dd5ed); /* Greenish gradient */
+    color: #ffffff;
+}
+
+.countdown {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 90vw; /* Ensure container doesn't exceed screen width */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ff5e6c;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#timer {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: center;
+    gap: 10px; /* Reduced gap for better fit on smaller screens */
+    font-size: 1.5em;
+}
+
+.time-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5px; /* Reduced margin for smaller screens */
+}
+
+.time-value {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.time-label {
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Style for the card-like appearance and layout */
+#equivalent-time {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px; /* Reduced gap between cards */
+    margin-top: 20px;
+    max-width: 100%; /* Ensure container fits screen width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#equivalent-time p {
+    background: #ffffff;
+    color: #333333;
+    border-radius: 10px;
+    padding: 10px; /* Reduced padding for a tighter fit */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 0.8em; /* Slightly smaller font size */
+}
+
+/* Center the "Total Milliseconds" card */
+#total-milliseconds {
+    grid-column: 1 / 3; /* Span both columns */
+    text-align: center;
+}
+
+/* Additional styling for a romantic feel */
+.countdown::before {
+    content: '❤️';
+    font-size: 5em;
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    opacity: 0.2;
+}
+
+.countdown::after {
+    content: '❤️';
+    font-size: 5em;
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.2;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    #timer {
+        font-size: 1.2em;
+    }
+
+    .time-value {
+        font-size: 1.5em;
+    }
+
+    #equivalent-time {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+
+    #equivalent-time p {
+        font-size: 0.75em; /* Smaller font size for mobile */
+    }
+}
