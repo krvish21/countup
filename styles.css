@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(to bottom right, #e14d72, #6dd5ed); /* Greenish gradient */
+    background: linear-gradient(to bottom right, #e14d72, #6dd5ed);
     color: #ffffff;
 }
 
@@ -16,7 +16,7 @@ body {
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 90vw; /* Ensure container doesn't exceed screen width */
+    max-width: 90vw;
     position: relative;
 }
 
@@ -34,9 +34,9 @@ h2 {
 
 #timer {
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px; /* Reduced gap for better fit on smaller screens */
+    gap: 10px;
     font-size: 1.5em;
 }
 
@@ -44,7 +44,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 5px; /* Reduced margin for smaller screens */
+    margin: 0 5px;
 }
 
 .time-value {
@@ -57,13 +57,12 @@ h2 {
     margin-top: 5px;
 }
 
-/* Style for the card-like appearance and layout */
 #equivalent-time {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5px; /* Reduced gap between cards */
+    gap: 5px;
     margin-top: 20px;
-    max-width: 100%; /* Ensure container fits screen width */
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -72,18 +71,16 @@ h2 {
     background: #ffffff;
     color: #333333;
     border-radius: 10px;
-    padding: 10px; /* Reduced padding for a tighter fit */
+    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 0.8em; /* Slightly smaller font size */
+    font-size: 0.8em;
 }
 
-/* Center the "Total Milliseconds" card */
 #total-milliseconds {
-    grid-column: 1 / 3; /* Span both columns */
+    grid-column: 1 / 3;
     text-align: center;
 }
 
-/* Additional styling for a romantic feel */
 .countdown::before {
     content: '❤️';
     font-size: 5em;
@@ -107,7 +104,7 @@ h2 {
 .monthly-greeting {
     font-size: 1.8em;
     font-weight: bold;
-    color: #29581c; /* Bright color for the greeting message */
+    color: #29581c; 
     margin-bottom: 20px;
     padding: 10px;
     background: rgba(255, 255, 255, 0.5);
@@ -115,7 +112,6 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Confetti styling */
 .confetti {
     position: absolute;
     top: 0;

@@ -23,14 +23,12 @@ function updateTimer() {
     const now = new Date().getTime();
     const distance = now - countupDate;
 
-    // Time calculations for days, hours, minutes and seconds
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
     const milliseconds = distance % 1000;
 
-    // Calculate equivalent total time
     const years = Math.floor(days / 365);
     const remainingDays = days % 365;
     const months = Math.floor(remainingDays / 30);
@@ -38,7 +36,6 @@ function updateTimer() {
     const totalMinutes = Math.floor(distance / (1000 * 60));
     const totalSeconds = Math.floor(distance / 1000);
 
-    // Display the result in the elements
     document.getElementById("days").innerText = days;
     document.getElementById("hours").innerText = hours;
     document.getElementById("minutes").innerText = minutes;
@@ -52,7 +49,6 @@ function updateTimer() {
     document.getElementById("total-seconds").innerText = `Total Seconds: ${totalSeconds}`;
     document.getElementById("total-milliseconds").innerText = `Total Milliseconds: ${distance}`;
 
-    // Display monthly greeting message
     const today = new Date().getDate();
     const greetingElement = document.getElementById('monthly-greeting');
     if (today === 3) {
@@ -62,7 +58,6 @@ function updateTimer() {
         }
     } else {
         greetingElement.innerHTML = '';
-        // Remove confetti if present
         const confetti = document.querySelector('.confetti');
         if (confetti) {
             confetti.remove();
@@ -70,8 +65,6 @@ function updateTimer() {
     }
 }
 
-// Update the timer every 1 second
 setInterval(updateTimer, 1000);
 
-// Run updateTimer on page load
 updateTimer();
